@@ -1,0 +1,17 @@
+div.prin{
+    display: grid;
+    grid-template-columns:  repeat(4, 100px);
+    grid-template-rows: 100px 100px;
+    justify-content: center;
+}
+
+div.prin div{
+    padding: 3px;
+    border: 1px white dashed;
+}
+div.azul{
+    background-color: rgb(86, 125, 164);
+}
+div.branco{
+    background-color: lightgray;
+}   

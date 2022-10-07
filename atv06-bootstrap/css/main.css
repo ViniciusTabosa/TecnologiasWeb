@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+body#painel {
+  background-color: darkseagreen;
+}
+
+body#historico{
+  background-color: skyblue;
+}
+
+body#cadastro {
+  background-color: darkgrey;
+}
+
+body#perfil {
+  background-color: plum;
+}
+
+header {
+  background: #394674;
+  color: #fff;
+  width: 100%;
+  padding: 0.5rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* Seletor de classe */
+.formulario {
+  border: 1px solid black;
+  margin: 1% 0%;
+  background-color: #555e8150;
+  padding: 2%;
+}
+
+/* Seletor de atributo */
+[lista="lista"] {
+  width: 40%;
+  border: groove;
+  padding: 1%;
+  margin: 2%;
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+  position: static;
+  margin-top: 1%;
+}
+
+#trancado {
+  display: none;
+}
+
+#disciplinas {
+  display: contents;
+}
+
+nav {
+  width: 100%;
+  padding: 0.5rem;
+  
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+p {
+  max-width: 1000px;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+/* Seletor de pseudo-elemento */
+p::first-letter {
+  font-size: xx-large;
+}
+
+/* Seletor de pseudo-classe */
+p:first-of-type {
+  background-color: aquamarine;
+}
+
+form {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem; 
+}
+
+footer {
+  background: #394674;
+  color: #fff;
+  width: 100%;
+  padding: 0.5rem;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  
+}
+
+/* Seletor de elemento */
+#tabela-hist{
+  border: 1px solid black;
+  margin: 2% 0%;
+}
+
+td {
+  border: 1px solid black;
+  width: 200px;
+}
+
+tr {
+  border: 1px solid black;
+}
