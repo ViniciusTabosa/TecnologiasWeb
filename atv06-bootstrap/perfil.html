@@ -5,49 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+    
     <title>Perfil</title>
 </head>
 <body id="perfil">
     <header>SIGAA - Sistema Integrado GAA</header>
 
-    <nav>
-        <a href="index.html">Login</a>
-        <a href="painelControle.html">Painel</a>
-        <a href="historico.html">Histórico</a>
-        <a href="cadComponente.html">Cadastro</a>
+    <!-- Navbar -->
+    <nav class="navbar bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/user.png  " alt="" width="30" height="24">
+            <a href="index.html">Login</a>
+            <a href="painelControle.html">Painel</a>
+            <a href="historico.html">Histórico</a>
+            <a href="cadComponente.html">Cadastro</a>
+          </a>
+        </div>
     </nav>
-    <img src="img/user.png" alt="Foto de perfil" width="50px">
     
+    
+    <div class="btns-laterais">
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Documentos
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Declaração de vínculo</a></li>
+              <li><a class="dropdown-item" href="#">Histórico escolar</a></li>
+              <li><a class="dropdown-item" href="#">Atestado de matrícula</a></li>
+            </ul>
+        </div>
+        <!-- Badges -->
+        <button type="button" class="btn btn-primary position-relative" id="button-badge">
+            Notificações
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              2+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+        </button>
+    </div>
     <h2>Informações pessoais</h2>
-    <ul type="none" lista="lista">
-        <li>Nome: Fulano</li>
-        <li>Email: fulano@alu.ufc.br</li>
-        <li>IRA: 9.8</li>
-        <li>Créditos das disciplinas: 200</li>
-        <li>Tema do site: <input type="color"></li>
-    </ul>
+    
+    <!-- Card -->
+    <div class="card" style="width: 18rem;">
+        <img src="img/user.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fulado</h5>
+          <p class="card-text">Estudante do Curso de Engenharia de Computação da Universidade Federal do Ceará</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="bi bi-envelope"></i> E-mail: fulano@alu.ufc.br</li>
+          <li class="list-group-item"><i class="bi bi-calculator"></i> IRA: 7.9</li>
+          <li class="list-group-item"><i class="bi bi-credit-card"></i> Créditos das disciplinas: 200</li>
+          <li class="list-group-item"><i class="bi bi-palette"></i> Tema do site: <input type="color"></li>
+          <li class="list-group-item">
+            <i class="bi bi-hourglass-split"></i> Curso:
+            <!-- Spinner -->
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+          </li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Turmas</a>
+          <a href="#" class="card-link">Disciplinas</a>
+        </div>
+    </div>
+    
+
     <h2>Progresso no curso</h2>
     <ul type="none" lista="lista">
         <li>Disciplinas obrigatórias</li>
-        <progress max="100" value="70"></progress>
+        <!-- Progress -->
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
         <li>Disciplinas eletivas</li>
-        <progress max="100" value="60"></progress>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">40%</div>
+        </div>
         <li>Horas de estágio obrigatório</li>
-        <progress max="100" value="90"></progress>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+        </div>
         <li>Horas complementares</li>
-        <progress max="100" value="70"></progress>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 5%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">5%</div>
+        </div>
         <li>Horas de extensão</li>
-        <progress max="100" value="40"></progress>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">20%</div>
+        </div>
         <li>Horas de programação</li>
-        <progress max="100" value="80"></progress>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 30%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">30%</div>
+        </div>
+
+        <!-- Button group -->
+        <div class="btn-group" role="group" aria-label="Basic example" id="btn-group">
+            <button type="button" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-primary">Imprimir</button>
+        </div>
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Submeter horas complementares</button>
     </ul>
 
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Toasts que não funciona</button>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+        Hello, world! This is a toast message.
+        </div>
+    </div>
+    </div>
+
+
     <h2>Atividades integrada pelo aluno</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum dolor necessitatibus minus architecto dignissimos adipisci est eaque in consequuntur recusandae modi qui dolores, nesciunt tenetur illo soluta esse odio provident?</p>
+    <p class="perfil">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum dolor necessitatibus minus architecto dignissimos adipisci est eaque in consequuntur recusandae modi qui dolores, nesciunt tenetur illo soluta esse odio provident?</p>
     <h2>Atividades pendentes</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur aspernatur harum facilis itaque minus suscipit dolorem dolore, cupiditate magni odio, ipsam quo eius. Magnam temporibus quo optio porro omnis.</p>
+    <p class="perfil">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque consequatur aspernatur harum facilis itaque minus suscipit dolorem dolore, cupiditate magni odio, ipsam quo eius. Magnam temporibus quo optio porro omnis.</p>
 
     <footer>Universidade Federal do Ceará</footer>
 </body>

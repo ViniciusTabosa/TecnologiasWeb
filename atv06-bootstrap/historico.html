@@ -12,28 +12,42 @@
 <body id="historico">
     <header>SIGAA - Sistema Integrado GAA</header>
 
-    <nav>
-        <a href="index.html">Login</a>
-        <a href="painelControle.html">Painel</a>
-        <a href="historico.html">Histórico</a>
-        <a href="cadComponente.html">Cadastro</a>
+    <!-- Navbar -->
+    <nav class="navbar bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/user.png  " alt="" width="30" height="24">
+            <a href="index.html">Login</a>
+            <a href="painelControle.html">Painel</a>
+            <a href="historico.html">Histórico</a>
+            <a href="cadComponente.html">Cadastro</a>
+          </a>
+        </div>
     </nav>
 
-    <h2>Histórico do aluno</h2>
-    <table id="tabela-hist">
-        <tr>
-            <td atrib="cor">Disciplinas</td>
-            <td atrib="cor">Rendimento</td>
-        </tr>
-        <tr>
-            <td>Calculo I</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td>Arquiterura</td>
-            <td>10</td>
-        </tr>
-    </table>
+    <div class="row">
+        <div class="col-4">
+          <div id="list-example" class="list-group">
+            <a class="list-group-item list-group-item-action" href="#list-item-1">2019.1</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2">2019.2</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3">2020.1</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-4">2020.2</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+            <h4 id="list-item-1">2019.1</h4>
+            <p>Calculo 1: 9.9</p>
+            <h4 id="list-item-2">2019.2</h4>
+            <p>Calculo 2: 8.7</p>
+            <h4 id="list-item-3">2020.1</h4>
+            <p>Calculo 3: 7.9</p>
+            <h4 id="list-item-4">2020.2</h4>
+            <p>Fisica 3: 2</p>
+          </div>
+        </div>
+      </div>
+
     <footer>Universidade Federal do Ceará</footer>
 </body>
 </html>
