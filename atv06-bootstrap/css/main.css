@@ -183,3 +183,15 @@ div.row{
   width: 90%;
 }
 
+p a#btn-colapse{
+
+  font-size: 60%;
+}
+
+form.formulario button{
+  margin-top: 3px;
+}
+
+#btn-offcanva{
+  width: 70px;
+}
